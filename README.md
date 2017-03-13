@@ -6,14 +6,23 @@ Synonyms are provided by the API at http://words.bighugelabs.com
 
 ## Install
 1. Place the script whereever you would like
+```bash
+$ cd /usr/local/src
+$ git clone https://github.com/eikaas/syns.git
+$ ln -s /usr/local/bin/syns /usr/local/src/syns/syns.sh
+```
 2. Register at http://words.bighugelabs.com to get an API key
 3. Put your API key in ~/.config/syns/apikey
-
-## Usage
 ```bash
-./syns [...list of words] [--json]
+mkdir -p ~/.config/syns
+cat "herpderpimakey" > ~/.config/syns/apikey
 ```
 
+## Syntax
+```bash
+./syns [--json] <...list of words>
+	--json 	Output pretty json
+```
 
 ### Normal CLI usage
 ```bash
