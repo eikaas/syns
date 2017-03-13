@@ -8,6 +8,7 @@ declare -r APIKEY_PATH="${HOME}/.config/syns/apikey"
 declare -r FORMAT="%-10s %s\n"
 declare -r URL="http://words.bighugelabs.com"
 declare -i isJsonOutput=0
+declare -i isJsonOutput=0
 declare -a queryWords=()
 
 # mkdir -p ~/.config/syns &&echo "yourapikey" > ~/.config/syns/apikey
@@ -35,8 +36,9 @@ done
 
 if [[ ${isJsonOutput} -eq 1 ]]; then
 	for q in ${querywords[@]}; do
-		curl -sL --fail "${URL}/api/2/${APIKEY}/${q}/json"
+		echo $(curl -sL --fail "${URL}/api/2/${APIKEY}/${q}/json") | python -m json.tool
 	done
+
 else
 	prev_article=""
 	for q in ${querywords[@]}; do
