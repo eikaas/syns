@@ -1,5 +1,5 @@
 # syns
-Small cruddy tool to quickly get synonyms of given words in the CLI.
+A quick and dirty CLI tool to find synonyms of a given word. Because _variable names can be hard, demanding, unmanageable, defiant, problematic, tricky, unruly and even vexed_.
 
 ## Credits
 Synonyms are provided by the API at http://words.bighugelabs.com
